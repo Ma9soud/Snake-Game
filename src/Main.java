@@ -6,7 +6,7 @@ public class Main {
 
         JFrame f = new JFrame();
         f.setTitle("Snake Game");
-        f.setIconImage(new ImageIcon("snakeicon.png").getImage());
+        f.setIconImage(new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\snakeicon.png").getImage());
         f.setBounds(10,10,905,700);
         f.setResizable(false);
         f.setVisible(true);

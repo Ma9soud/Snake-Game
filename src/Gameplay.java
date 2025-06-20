@@ -58,10 +58,10 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     public void spawnEnemy(){
         int zhar = random.nextInt(7);
         if(zhar == 3){
-            enemyimage = new ImageIcon("banana.jpg");
+            enemyimage = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\banana.jpg");
             code = 0;
         } else {
-            enemyimage = new ImageIcon("apple.jpg");
+            enemyimage = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\apple.jpg");
             code = 1;
         }
         xpos = random.nextInt(34);
@@ -79,7 +79,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
             snakeylength[1] = 100;
             snakeylength[2] = 100;
 
-            SoundPlayer.playLooped("ingame.wav");
+            SoundPlayer.playLooped("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\ingame.wav");
         }
 
 
@@ -87,7 +87,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.WHITE);
         g.drawRect(24,10,851,55);
 
-        titleImage = new ImageIcon("snaketitlee.png");
+        titleImage = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\snaketitlee.png");
         titleImage.paintIcon(this,g,25,11);
         //border of gameplay
         g.setColor(Color.WHITE);
@@ -101,29 +101,29 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         g.drawString("Score: " +score,780,30);
         g.drawString("Length: " +lengthofsnake,780,50);
 
-        rightmouth = new ImageIcon("right.png");
+        rightmouth = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\right.png");
         rightmouth.paintIcon(this,g,snakexlength[0],snakeylength[0]);
 
         for(int i = 0 ; i < lengthofsnake ; i++){
             if( i == 0 && right){
-                rightmouth = new ImageIcon("right.png");
+                rightmouth = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\right.png");
                 rightmouth.paintIcon(this,g,snakexlength[i],snakeylength[i]);
             }
             if( i == 0 && left){
-                leftmouth = new ImageIcon("left.png");
+                leftmouth = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\left.png");
                 leftmouth.paintIcon(this,g,snakexlength[i],snakeylength[i]);
             }
             if( i == 0 && up){
-                upmouth = new ImageIcon("up.png");
+                upmouth = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\up.png");
                 upmouth.paintIcon(this,g,snakexlength[i],snakeylength[i]);
             }
             if( i == 0 && down){
-                downmouth = new ImageIcon("down.png");
+                downmouth = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\down.png");
                 downmouth.paintIcon(this,g,snakexlength[i],snakeylength[i]);
             }
 
             if(i != 0){
-                snakeimage = new ImageIcon("snakebody.png");
+                snakeimage = new ImageIcon("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\snakebody.png");
                 snakeimage.paintIcon(this,g,snakexlength[i],snakeylength[i]);
             }
         }
@@ -135,10 +135,10 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
         if(enemyxpos[xpos] == snakexlength[0] && enemyypos[ypos] == snakeylength[0] ){
             if(code == 1){
-                SoundPlayer.playSound("eat.wav");
+                SoundPlayer.playSound("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\eat.wav");
                 score = score + 10;
             } else {
-                SoundPlayer.playSound("specialeat.wav");
+                SoundPlayer.playSound("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\specialeat.wav");
                 score = score + 25;
             }
 
@@ -154,7 +154,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
                 down = false;
                 gameOver = true;
                 SoundPlayer.stopLooped();
-                SoundPlayer.playSound("gameovertrom.wav");
+                SoundPlayer.playSound("C:\\Users\\ma9so\\OneDrive\\Bureau\\Java\\SnakeGame\\src\\asset\\gameovertrom.wav");
 
                 g.setColor(Color.RED);
                 g.setFont(new Font("arial",Font.BOLD,50));
